@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&display=swap');
+
+* {
+  font-family: 'Cormorant Garamond', serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #4a4a4a;
+  color: #ffffff;
+}
+
+/* Cabeçalho */
+.topo {
+  background-color: #4a4a4a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 60px;
+  position: relative;
+}
+
+.logo {
+  height: 100px;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #d9b97f;
+}
+
+/* Menu hambúrguer */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* Banner + tratamentos */
+.banner {
+  position: relative;
+  background: url('img/banner.jpg') no-repeat center center;
+  background-size: cover;
+  min-height: 720px;
+  padding: 100px 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.conteudo-banner {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+.texto-banner h1 {
+  font-size: 34px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.texto-banner p {
+  font-size: 20px;
+  color: #d9b97f;
+  margin-bottom: 50px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Tratamentos */
+.tratamentos {
+  background: none;
+  padding: 0;
+}
+
+.tratamentos h2 {
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+
+.opcoes {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.opcoes div {
+  text-align: center;
+  font-size: 18px;
+  color: #e6c065;
+}
+
+.opcoes i {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+/* RODAPÉ MAIOR */
+footer {
+  background-color: #4a4a4a;
+  color: #ffffff;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.rodape {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.rodape img {
+  height: 90px;
+}
+
+.contato {
+  font-size: 18px;
+  color: #d9d9d9;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.frase {
+  font-size: 22px;
+  color: #ffffff;
+  margin-top: 40px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: #4a4a4a;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    padding: 20px;
+    z-index: 10;
+  }
+
+  .menu.menu-ativo {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+
